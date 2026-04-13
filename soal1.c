@@ -18,34 +18,33 @@ int main(){
     double suhu_temp;
     int jam;
 
-    printf("Masukkan izin, suhu, radiasi, dan jam :\n" );
     scanf("%d %lf %u %d", &izin, &suhu, &radius, &jam);
 
     suhu_temp = suhu * 0.1;
 
     if (radius >= 6){
-    printf("TOLAK\n");}
+    printf("TOLAK");}
 
     else if(suhu >= 390){
-    printf("KARANTINA\n");}
+    printf("KARANTINA");}
 
     else if(izin == 1 && (jam < 6 || jam > 20)){
-    printf("TOLAK\n");}
+    printf("TOLAK");}
 
     else if(izin == 1){
-    printf("MASUK\n");}
+    printf("MASUK");}
 
     else if(izin == 2 && (radius <= 2 && jam >= 8 && jam <= 18)){
-    printf("MASUK\n");}
+    printf("MASUK");}
 
     else if(izin == 2){
-    printf("PEMERIKSAAN\n");}
+    printf("PEMERIKSAAN");}
 
     else if(izin == 3 && radius == 0 && suhu < 380){
-    printf("MASUK\n");}
+    printf("MASUK");}
 
     else{
-    printf("TOLAK\n");}
+    printf("TOLAK");}
 
     return 0;
 }
